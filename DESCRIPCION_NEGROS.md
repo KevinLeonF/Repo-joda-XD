@@ -32,12 +32,16 @@ Un proyecto **claro, útil y atractivo** para [tu objetivo].
 ---
 
 ## 🚀 Instalación Rápida
-```bash
+bash
 git clone https://github.com/KevinLeonF/Repo-joda-XD.git
 cd repositorio
 npm install
 npm run dev
+---
 
+
+---## 📖 Uso
+1. Configura las variables de entorno en `.env`
 <h1 align="center">✨ Repo-joda-XD ✨</h1>
 
 <p align="center">
