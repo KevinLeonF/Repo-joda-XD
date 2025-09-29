@@ -1,5 +1,5 @@
 # Repo-joda-XD
-Alex = negro
+* Alex = negro
 # TODOS LO INTEGRANTES DE ESTE REPO CREEMOS QUE @DARIEN ES GEY......
 
 <h1 align="center">🚀 Proyecto Increíble 🚀</h1>
@@ -33,7 +33,7 @@ Un proyecto **claro, útil y atractivo** para [tu objetivo].
 
 ## 🚀 Instalación Rápida
 ```bash
-git clone https://github.com/usuario/repositorio.git
+git clone https://github.com/KevinLeonF/Repo-joda-XD.git
 cd repositorio
 npm install
 npm run dev
