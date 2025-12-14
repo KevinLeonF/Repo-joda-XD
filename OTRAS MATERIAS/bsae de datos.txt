@@ -1,0 +1,55 @@
+create database nombre_bd;
+
+use nombre_bd;
+
+use clase1;
+
+create table persona(
+    -> ci int primary key not null,
+    -> nombre varchar(20) not null,
+    -> ap_p varchar(20),
+    -> ap_m varchar(20),
+    -> telefono int,     //'auto'(o cualquieraa)_increment para que incremente automáticamente  ejemplo código int auto_increment primary key;
+    -> direccion varchar (50)
+    -> );
+
+show tables;
+
+describe persona;
+
+insert into persona (ci,nombre,ap_p,ap_m,telefono,direccion)  //especifica dponde insertar
+
+    -> values(21555,'Kevin','Ramires','Flores',121636,'Av Murillo #6');
+
+
+insert into persona values (345455,'Sussan','Vega','Llanos',56464646,'Av Los Pinos #58');
+(aqui podemos poner los datos que queramos para la tabla)//forma directa
+
+
+
+select * from persona;
+
+select nombre, ap_p,ap_m
+    -> from persona
+    -> where nombre like'%a%';     ////la "a" es para con que palabra inicara     '%a%', 'A%', '%a', '%%a%'
+(para mostrar especificamente)
+
+
+
+
+ select nombre, ap_p, ap_m
+    -> from persona
+    -> where ap_p like'R%';
+
+
+
+
+//para hacer una tabla uniendo dos;
+create table compra(
+   id int primary key,
+   fecha datetime,
+   ci_persona int,
+   cod_preducto int,
+   foreign key (ci_persona)references persona(ci)
+   foreign key (cod_producto)references producto(ci)
+);

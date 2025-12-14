@@ -1,0 +1,48 @@
+Equipos con presupuesto mayor a 500 y que hayan participado en competencias de categoría igual a 2:
+SELECT DISTINCT E.NOM_C
+FROM EQUIPO E
+JOIN PARTICIPAR P ON E.CE = P.CE
+JOIN COMPETENCIA C ON P.CC = C.CC
+WHERE E.PRESUPUESTO > 500 AND C.CATEGORIA = 2;
+b) Equipos que solo han conseguido el primer puesto:
+SELECT E.NOM_C
+FROM EQUIPO E
+WHERE E.CE NOT IN (
+    SELECT P.CE
+    FROM PARTICIPAR P
+    WHERE P.PUESTO != 1
+);
+Equipos que han participado en todas las competencias:
+SELECT E.NOM_C
+FROM EQUIPO E
+WHERE NOT EXISTS (
+    SELECT C.CC
+    FROM COMPETENCIA C
+    WHERE C.CC NOT IN (
+        SELECT P.CC
+        FROM PARTICIPAR P
+        WHERE P.CE = E.CE
+    )
+);
+Equipos que han participado en las competencias P1 y P2:
+SELECT E.NOM_C
+FROM EQUIPO E
+WHERE E.CE IN (
+    SELECT P.CE
+    FROM PARTICIPAR P
+    WHERE P.CC = 1
+)
+AND E.CE IN (
+    SELECT P.CE
+    FROM PARTICIPAR P
+    WHERE P.CC = 2
+);
+Nombre y presupuesto de equipos que no han conseguido el primer puesto
+SELECT DISTINCT E.NOM_C, E.PRESUPUESTO
+FROM EQUIPO E
+JOIN PARTICIPAR P ON E.CE = P.CE
+WHERE E.CE NOT IN (
+    SELECT P.CE
+    FROM PARTICIPAR P
+    WHERE P.PUESTO = 1
+);
