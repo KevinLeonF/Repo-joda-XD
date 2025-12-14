@@ -1,0 +1,461 @@
+---
+import {
+  PlayArrow,
+  CalendarToday,
+  Email,
+  BarChart,
+} from "@mui/icons-material";
+import {
+  Box,
+  Container,
+  Typography,
+  Button,
+  Card,
+  CardContent,
+  Avatar,
+  IconButton,
+} from "@mui/material";
+---
+
+<Box
+  component="section"
+  aria-label="Hero section"
+  sx={{
+    position: "relative",
+    minHeight: "100vh",
+    backgroundColor: "#4ECDC4",
+    overflow: "hidden",
+    paddingTop: { xs: "80px", md: "120px" },
+  }}
+>
+  {/* Curved white shape at bottom */}
+  <Box
+    component="div"
+    aria-hidden="true"
+    sx={{
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      right: 0,
+      height: "128px",
+      backgroundColor: "white",
+      borderRadius: "100px 100px 0 0",
+    }}
+  />
+
+  <Container maxWidth="xl" sx={{ position: "relative", zIndex: 1 }} client:load>
+    <Box
+      component="div"
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        gap: { xs: 4, md: 6 },
+        paddingTop: { xs: 4, md: 8 },
+        alignItems: { md: "center" },
+      }}
+    >
+      {/* Left side - Text content */}
+      <Box
+        component="article"
+        sx={{
+          flex: { md: "1 1 50%" },
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          gap: 3,
+          paddingRight: { md: 5 },
+          zIndex: 2,
+        }}
+      >
+        {/* Headline Section */}
+        <Box component="header">
+          <Typography
+            component="h1"
+            variant="h1"
+            sx={{
+              fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem", lg: "4rem" },
+              fontWeight: 700,
+              lineHeight: 1.2,
+              color: "white",
+              fontFamily: "sans-serif",
+            }}
+          >
+            <Box component="span" sx={{ color: "#FF6B35" }}>
+              Comprar
+            </Box>{" "}
+            muebles en línea ahora es más fácil.
+          </Typography>
+        </Box>
+
+        {/* Description Section */}
+        <Box component="div">
+          <Typography
+            component="p"
+            variant="body1"
+            sx={{
+              fontSize: { xs: "1rem", md: "1.125rem" },
+              color: "white",
+              opacity: 0.95,
+              maxWidth: "500px",
+              lineHeight: 1.6,
+            }}
+          >
+            Encuentra muebles de calidad y compra de forma segura y rápida.
+          </Typography>
+        </Box>
+
+        {/* Call to Action Section */}
+        <Box
+          component="div"
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 3,
+            marginTop: 2,
+            flexWrap: { xs: "wrap", sm: "nowrap" },
+          }}
+        >
+          <Button
+            variant="contained"
+            href="/lessons"
+            aria-label="Join for free"
+            sx={{
+              backgroundColor: "#4ECDC4",
+              color: "white",
+              paddingX: 3,
+              paddingY: 1.5,
+              fontSize: "16px",
+              fontWeight: 600,
+              borderRadius: "8px",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              textTransform: "none",
+              "&:hover": {
+                backgroundColor: "#45b8b0",
+              },
+            }}
+          >
+            Join for free
+          </Button>
+
+          <Box
+            component="div"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 1.5,
+              cursor: "pointer",
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Watch how it works"
+          >
+            <IconButton
+              aria-label="Play video"
+              sx={{
+                backgroundColor: "white",
+                color: "#4ECDC4",
+                width: 48,
+                height: 48,
+                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                "&:hover": {
+                  backgroundColor: "white",
+                  transform: "scale(1.1)",
+                },
+                transition: "transform 0.2s",
+              }}
+            >
+              <PlayArrow sx={{ fontSize: "24px" }} />
+            </IconButton>
+            <Typography
+              component="span"
+              sx={{
+                color: "#374151",
+                fontWeight: 500,
+                fontSize: "1rem",
+              }}
+            >
+              Watch how it works
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+
+      {/* Right side - Student image with floating UI elements */}
+      <Box
+        component="aside"
+        aria-label="Student illustration with notifications"
+        sx={{
+          flex: { md: "1 1 50%" },
+          position: "relative",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: { xs: "400px", md: "600px" },
+          paddingTop: { xs: 4, md: 0 },
+        }}
+      >
+        {/* Image Container */}
+        <Box
+          component="div"
+          sx={{
+            position: "relative",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {/* Main student image */}
+          <Box
+            component="img"
+            src="/image/gril2.png"
+            alt="Cliente comprando muebles en línea"
+            sx={{
+              position: "relative",
+              zIndex: 10,
+              maxWidth: "100%",
+              height: "auto",
+              maxHeight: { xs: "400px", md: "600px" },
+              objectFit: "contain",
+            }}
+          />
+
+          {/* Floating UI Elements Container */}
+          <Box
+            component="div"
+            aria-label="Floating notifications"
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              pointerEvents: "none",
+            }}
+          >
+            {/* Top-left: Calendar notification (above left shoulder) */}
+            <Card
+              component="div"
+              role="region"
+              aria-label="250k muebles entregados"
+              sx={{
+                position: "absolute",
+                top: { xs: "8%", md: "12%" },
+                left: { xs: "5%", md: "8%" },
+                width: { xs: "200px", md: "240px" },
+                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "12px",
+                boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)",
+                zIndex: 20,
+                pointerEvents: "auto",
+              }}
+            >
+              <CardContent
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1.5,
+                  padding: "16px !important",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: 40,
+                    height: 40,
+                    backgroundColor: "#4ECDC4",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}
+                >
+                  <CalendarToday sx={{ color: "white", fontSize: "20px" }} />
+                </Box>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "12px", md: "14px" },
+                    fontWeight: 600,
+                    color: "#1F2937",
+                    lineHeight: 1.3,
+                  }}
+                >
+                  250k muebles entregados
+                </Typography>
+              </CardContent>
+            </Card>
+
+            {/* Top-right: Bar chart icon (small square red icon) */}
+            <Box
+              component="div"
+              aria-label="Statistics icon"
+              sx={{
+                position: "absolute",
+                top: { xs: "15%", md: "18%" },
+                right: { xs: "8%", md: "12%" },
+                width: { xs: 40, md: 48 },
+                height: { xs: 40, md: 48 },
+                backgroundColor: "#FF6B35",
+                borderRadius: "8px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)",
+                zIndex: 20,
+                pointerEvents: "auto",
+              }}
+            >
+              <BarChart sx={{ color: "white", fontSize: { xs: "20px", md: "24px" } }} />
+            </Box>
+
+            {/* Mid-right: Congratulations notification (below right arm) */}
+            <Card
+              component="div"
+              role="region"
+              aria-label="Pedido confirmado"
+              sx={{
+                position: "absolute",
+                top: { xs: "45%", md: "48%" },
+                right: { xs: "3%", md: "5%" },
+                transform: "translateY(-50%)",
+                width: { xs: "220px", md: "260px" },
+                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "12px",
+                boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)",
+                zIndex: 20,
+                pointerEvents: "auto",
+              }}
+            >
+              <CardContent
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1.5,
+                  padding: "16px !important",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: 40,
+                    height: 40,
+                    backgroundColor: "#FF6B35",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}
+                >
+                  <Email sx={{ color: "white", fontSize: "20px" }} />
+                </Box>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "13px", md: "15px" },
+                    fontWeight: 700,
+                    color: "#1F2937",
+                    lineHeight: 1.3,
+                  }}
+                >
+                  ¡Felicitaciones!
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "11px", md: "12px" },
+                    color: "#6B7280",
+                    lineHeight: 1.3,
+                  }}
+                >
+                  Tu pedido fue confirmado
+                </Typography>
+              </CardContent>
+            </Card>
+
+            {/* Bottom-center: Class notification with Join button (in front of waist) */}
+            <Card
+              component="div"
+              role="region"
+              aria-label="Promoción Sala Moderna"
+              sx={{
+                position: "absolute",
+                bottom: { xs: "15%", md: "20%" },
+                left: "50%",
+                transform: { xs: "translateX(-50%)", md: "translateX(-60%)" },
+                width: { xs: "240px", md: "280px" },
+                backgroundColor: "rgba(255, 255, 255, 0.95)",
+                backdropFilter: "blur(10px)",
+                borderRadius: "12px",
+                boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)",
+                zIndex: 20,
+                pointerEvents: "auto",
+              }}
+            >
+              <CardContent sx={{ padding: "16px !important" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1.5,
+                    marginBottom: 2,
+                  }}
+                >
+                  <Avatar
+                    src="/image/gril2.png"
+                    alt="Instructor profile"
+                    sx={{
+                      width: 40,
+                      height: 40,
+                      border: "2px solid #4ECDC4",
+                    }}
+                  />
+                  <Box>
+                    <Typography
+                      sx={{
+                        fontSize: { xs: "12px", md: "14px" },
+                        fontWeight: 600,
+                        color: "#1F2937",
+                        lineHeight: 1.3,
+                      }}
+                    >
+                      Sala Moderna
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontSize: { xs: "10px", md: "12px" },
+                        color: "#6B7280",
+                        lineHeight: 1.3,
+                      }}
+                    >
+                      Hoy a las 12:00 PM
+                    </Typography>
+                  </Box>
+                </Box>
+                <Button
+                  fullWidth
+                  variant="contained"
+                  aria-label="Join User Experience Class"
+                  sx={{
+                    backgroundColor: "#FF6B35",
+                    color: "white",
+                    paddingY: 1,
+                    fontSize: { xs: "12px", md: "14px" },
+                    fontWeight: 600,
+                    borderRadius: "8px",
+                    textTransform: "none",
+                    "&:hover": {
+                      backgroundColor: "#e55a2b",
+                    },
+                  }}
+                >
+                  Join Now
+                </Button>
+              </CardContent>
+            </Card>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  </Container>
+</Box>

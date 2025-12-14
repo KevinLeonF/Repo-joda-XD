@@ -1,0 +1,191 @@
+---
+import { AppBar, Toolbar, Container, Box, Button, Avatar, Typography, IconButton } from "@mui/material";
+import { KeyboardArrowDown } from "@mui/icons-material";
+---
+
+<AppBar
+  position="static"
+  sx={{
+    backgroundColor: "white",
+    boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    borderBottom: "1px solid #E5E7EB",
+  }}
+>
+  <Container maxWidth="xl">
+    <Toolbar
+      sx={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingY: 1.5,
+      }}
+    >
+      {/* Logo */}
+      <Box
+        component="a"
+        href="/"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          textDecoration: "none",
+          gap: 0.5,
+        }}
+      >
+        <Box
+          component="img"
+          src="/image/logo2.svg"
+          alt="TOTC Logo"
+          sx={{
+            height: 40,
+            width: "auto",
+          }}
+        />
+      </Box>
+
+      {/* Navigation Menu */}
+      <Box
+        sx={{
+          display: { xs: "none", md: "flex" },
+          gap: 4,
+          alignItems: "center",
+        }}
+      >
+        <Button
+          component="a"
+          href="/"
+          sx={{
+            color: "#6B7280",
+            fontSize: "0.9rem",
+            fontWeight: 500,
+            textTransform: "none",
+            fontFamily: "system-ui, -apple-system, sans-serif",
+            padding: 0,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "transparent",
+              color: "#111827",
+            },
+          }}
+        >
+          Home
+        </Button>
+        <Button
+          component="a"
+          href="/courses"
+          sx={{
+            color: "#6B7280",
+            fontSize: "0.9rem",
+            fontWeight: 500,
+            textTransform: "none",
+            fontFamily: "system-ui, -apple-system, sans-serif",
+            padding: 0,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "transparent",
+              color: "#111827",
+            },
+          }}
+        >
+          Courses
+        </Button>
+        <Button
+          component="a"
+          href="/careers"
+          sx={{
+            color: "#6B7280",
+            fontSize: "0.9rem",
+            fontWeight: 500,
+            textTransform: "none",
+            fontFamily: "system-ui, -apple-system, sans-serif",
+            padding: 0,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "transparent",
+              color: "#111827",
+            },
+          }}
+        >
+          Careers
+        </Button>
+        <Button
+          component="a"
+          href="/blog"
+          sx={{
+            color: "#6B7280",
+            fontSize: "0.9rem",
+            fontWeight: 500,
+            textTransform: "none",
+            fontFamily: "system-ui, -apple-system, sans-serif",
+            padding: 0,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "transparent",
+              color: "#111827",
+            },
+          }}
+        >
+          Blog
+        </Button>
+        <Button
+          component="a"
+          href="/about"
+          sx={{
+            color: "#6B7280",
+            fontSize: "0.9rem",
+            fontWeight: 500,
+            textTransform: "none",
+            fontFamily: "system-ui, -apple-system, sans-serif",
+            padding: 0,
+            minWidth: "auto",
+            "&:hover": {
+              backgroundColor: "transparent",
+              color: "#111827",
+            },
+          }}
+        >
+          About Us
+        </Button>
+      </Box>
+
+      {/* User Profile */}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          gap: 1,
+        }}
+      >
+        <Avatar
+          src="https://i.pravatar.cc/150?img=5"
+          alt="Lina"
+          sx={{
+            width: 36,
+            height: 36,
+          }}
+        />
+        <Typography
+          sx={{
+            fontSize: "0.9rem",
+            fontWeight: 600,
+            color: "#111827",
+            fontFamily: "system-ui, -apple-system, sans-serif",
+            display: { xs: "none", sm: "block" },
+          }}
+        >
+          Lina
+        </Typography>
+        <IconButton
+          sx={{
+            padding: 0,
+            color: "#6B7280",
+            "&:hover": {
+              backgroundColor: "transparent",
+            },
+          }}
+        >
+          <KeyboardArrowDown />
+        </IconButton>
+      </Box>
+    </Toolbar>
+  </Container>
+</AppBar>

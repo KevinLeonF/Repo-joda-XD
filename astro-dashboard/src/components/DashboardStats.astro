@@ -1,0 +1,15 @@
+---
+import { PieChart } from './PieChart'
+import { BarLists } from './BarLists'
+import { AreaCharts } from './AreaCharts'
+---
+
+<section class='mb-10'>
+  <div class='md:flex-row flex overflow-x-scroll px-1 py-4 gap-5 flex-col'>
+    <PieChart client:load />
+  </div>
+  <div class='grid md:grid-cols-2 gap-5 pt-[4px] px-1'>
+    <BarLists />
+    <AreaCharts client:load />
+  </div>
+</section>

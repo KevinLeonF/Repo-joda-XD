@@ -1,0 +1,15 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import RegisterForm from "@/view/register/RegisterForm.astro";
+
+const { cookies, redirect } = Astro;
+
+const accessToken = cookies.get("accessToken");
+
+if (accessToken) {
+  return redirect("/dashboard/dashboard");
+}
+---
+<Layout title="Register">
+  <RegisterForm />
+</Layout>

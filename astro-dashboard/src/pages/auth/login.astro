@@ -1,0 +1,16 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import LoginForm from "@/view/login/LoginForm.astro";
+
+const { cookies, redirect } = Astro;
+
+const accessToken = cookies.get("accessToken");
+
+if (accessToken) {
+  return redirect("/dashboard/dashboard");
+}
+---
+
+<Layout title="Login">
+  <LoginForm />
+</Layout>

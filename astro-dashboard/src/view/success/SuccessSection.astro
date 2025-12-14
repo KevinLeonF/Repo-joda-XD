@@ -1,0 +1,318 @@
+---
+import {
+  Box,
+  Container,
+  Typography,
+} from "@mui/material";
+---
+
+<Box
+  component="section"
+  aria-label="Success statistics section"
+  sx={{
+    backgroundColor: "white",
+    paddingY: { xs: 6, md: 10 },
+    paddingX: { xs: 2, md: 0 },
+  }}
+>
+  <Container maxWidth="lg" client:load>
+    {/* Our Success Section */}
+    <Box
+      component="div"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        textAlign: "center",
+        marginBottom: { xs: 6, md: 8 },
+      }}
+    >
+      <Box component="header" sx={{ marginBottom: 3 }}>
+        <Typography
+          component="h2"
+          variant="h2"
+          sx={{
+            fontSize: { xs: "2rem", md: "2.5rem", lg: "3rem" },
+            fontWeight: 700,
+            color: "#1F2937",
+            fontFamily: "sans-serif",
+            marginBottom: 2,
+          }}
+        >
+          Nuestro Éxito en Muebles
+        </Typography>
+      </Box>
+
+      <Box component="div" sx={{ maxWidth: "700px" }}>
+        <Typography
+          component="p"
+          variant="body1"
+          sx={{
+            fontSize: { xs: "0.95rem", md: "1rem" },
+            color: "#4B5563",
+            lineHeight: 1.7,
+            fontFamily: "sans-serif",
+          }}
+        >
+          Conoce el rendimiento de nuestra tienda de muebles: calidad en cada
+          pieza, entregas puntuales y clientes satisfechos. Trabajamos para
+          ofrecer el mejor diseño y confort para tu hogar.
+        </Typography>
+      </Box>
+    </Box>
+
+    {/* Statistics Section */}
+    <Box
+      component="div"
+      aria-label="Success statistics"
+      sx={{
+        display: "flex",
+        flexDirection: { xs: "column", sm: "row" },
+        justifyContent: "center",
+        alignItems: { xs: "center", sm: "flex-start" },
+        gap: { xs: 4, sm: 3, md: 4, lg: 6 },
+        flexWrap: "wrap",
+        marginBottom: { xs: 8, md: 10 },
+      }}
+    >
+      {/* 15K+ Students */}
+      <Box
+        component="div"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          minWidth: { xs: "100%", sm: "140px", md: "160px" },
+        }}
+      >
+        <Typography
+          component="div"
+          aria-label="15 thousand plus students"
+          sx={{
+            fontSize: { xs: "2.5rem", md: "3rem", lg: "3.5rem" },
+            fontWeight: 700,
+            color: "#4ECDC4",
+            fontFamily: "sans-serif",
+            lineHeight: 1.2,
+            marginBottom: 1,
+          }}
+        >
+          15K+
+        </Typography>
+        <Typography
+          component="p"
+          sx={{
+            fontSize: { xs: "0.9rem", md: "1rem" },
+            color: "#4B5563",
+            fontFamily: "sans-serif",
+            fontWeight: 500,
+          }}
+        >
+          Clientes satisfechos
+        </Typography>
+      </Box>
+
+      {/* 75% Total success */}
+      <Box
+        component="div"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          minWidth: { xs: "100%", sm: "140px", md: "160px" },
+        }}
+      >
+        <Typography
+          component="div"
+          aria-label="75 percent total success"
+          sx={{
+            fontSize: { xs: "2.5rem", md: "3rem", lg: "3.5rem" },
+            fontWeight: 700,
+            color: "#4ECDC4",
+            fontFamily: "sans-serif",
+            lineHeight: 1.2,
+            marginBottom: 1,
+          }}
+        >
+          75%
+        </Typography>
+        <Typography
+          component="p"
+          sx={{
+            fontSize: { xs: "0.9rem", md: "1rem" },
+            color: "#4B5563",
+            fontFamily: "sans-serif",
+            fontWeight: 500,
+          }}
+        >
+          Pedidos completados
+        </Typography>
+      </Box>
+
+      {/* 35 Main questions */}
+      <Box
+        component="div"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          minWidth: { xs: "100%", sm: "140px", md: "160px" },
+        }}
+      >
+        <Typography
+          component="div"
+          aria-label="35 main questions"
+          sx={{
+            fontSize: { xs: "2.5rem", md: "3rem", lg: "3.5rem" },
+            fontWeight: 700,
+            color: "#4ECDC4",
+            fontFamily: "sans-serif",
+            lineHeight: 1.2,
+            marginBottom: 1,
+          }}
+        >
+          35
+        </Typography>
+        <Typography
+          component="p"
+          sx={{
+            fontSize: { xs: "0.9rem", md: "1rem" },
+            color: "#4B5563",
+            fontFamily: "sans-serif",
+            fontWeight: 500,
+          }}
+        >
+          Categorías principales
+        </Typography>
+      </Box>
+
+      {/* 26 Chief experts */}
+      <Box
+        component="div"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          minWidth: { xs: "100%", sm: "140px", md: "160px" },
+        }}
+      >
+        <Typography
+          component="div"
+          aria-label="26 chief experts"
+          sx={{
+            fontSize: { xs: "2.5rem", md: "3rem", lg: "3.5rem" },
+            fontWeight: 700,
+            color: "#4ECDC4",
+            fontFamily: "sans-serif",
+            lineHeight: 1.2,
+            marginBottom: 1,
+          }}
+        >
+          26
+        </Typography>
+        <Typography
+          component="p"
+          sx={{
+            fontSize: { xs: "0.9rem", md: "1rem" },
+            color: "#4B5563",
+            fontFamily: "sans-serif",
+            fontWeight: 500,
+          }}
+        >
+          Especialistas en mobiliario
+        </Typography>
+      </Box>
+
+      {/* 16 Years of experience */}
+      <Box
+        component="div"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          minWidth: { xs: "100%", sm: "140px", md: "160px" },
+        }}
+      >
+        <Typography
+          component="div"
+          aria-label="16 years of experience"
+          sx={{
+            fontSize: { xs: "2.5rem", md: "3rem", lg: "3.5rem" },
+            fontWeight: 700,
+            color: "#4ECDC4",
+            fontFamily: "sans-serif",
+            lineHeight: 1.2,
+            marginBottom: 1,
+          }}
+        >
+          16
+        </Typography>
+        <Typography
+          component="p"
+          sx={{
+            fontSize: { xs: "0.9rem", md: "1rem" },
+            color: "#4B5563",
+            fontFamily: "sans-serif",
+            fontWeight: 500,
+          }}
+        >
+          Años de experiencia
+        </Typography>
+      </Box>
+    </Box>
+
+    {/* All-In-One Cloud Software Section */}
+    <Box
+      component="div"
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        textAlign: "center",
+      }}
+    >
+      <Box component="header" sx={{ marginBottom: 3 }}>
+        <Typography
+          component="h2"
+          variant="h2"
+          sx={{
+            fontSize: { xs: "2rem", md: "2.5rem", lg: "3rem" },
+            fontWeight: 700,
+            fontFamily: "sans-serif",
+            lineHeight: 1.2,
+          }}
+        >
+          <Box component="span" sx={{ color: "#1F2937" }}>
+            Software integral
+          </Box>{" "}
+          <Box component="span" sx={{ color: "#4ECDC4" }}>
+            para tiendas de muebles.
+          </Box>
+        </Typography>
+      </Box>
+
+      <Box component="div" sx={{ maxWidth: "700px" }}>
+        <Typography
+          component="p"
+          variant="body1"
+          sx={{
+            fontSize: { xs: "0.95rem", md: "1rem" },
+            color: "#4B5563",
+            lineHeight: 1.7,
+            fontFamily: "sans-serif",
+          }}
+        >
+          Nuestra suite online reúne todas las herramientas para gestionar
+          catálogo, inventario, pedidos y entregas, impulsando tu tienda de
+          muebles de forma eficiente.
+        </Typography>
+      </Box>
+    </Box>
+  </Container>
+</Box>
+

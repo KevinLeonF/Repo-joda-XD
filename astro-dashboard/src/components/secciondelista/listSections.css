@@ -1,0 +1,34 @@
+/* Common styles for secciondelista grid sections */
+.secciondl-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.secciondl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.secciondl-card {
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(24, 39, 75, 0.08);
+  overflow: hidden;
+}
+
+.secciondl-light {
+  background-color: #EAF4FF;
+  padding: 40px 0;
+}
+
+.secciondl-link {
+  color: #14B8A6;
+  font-weight: 600;
+  text-decoration: none;
+}
+.secciondl-link:hover {
+  text-decoration: underline;
+}
+

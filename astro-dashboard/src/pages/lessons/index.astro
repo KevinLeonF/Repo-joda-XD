@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import LessonSection from "@/components/secciondelista/LessonSection.astro";
+import LessonNavbar from "@/components/secciondelista/LessonNavbar.astro";
+import CategoryGrid from "@/components/secciondelista/CategoryGrid";
+import RecommendedCarousel from "@/components/secciondelista/ElCarousel";
+import PersonalDevelopmentSection from "@/components/secciondelista/PersonalDevelopmentSection";
+import StudentViewingSection from "@/components/secciondelista/StudentViewingSection";
+import ChoiceSection from "@/components/secciondelista/ChoiceSection";
+import CoachingCTA from "@/components/secciondelista/CoachingCTA";
+import { Footer } from "@/components/footer/Footer";
+---
+
+<Layout title="Lessons">
+  <section style="background-color: white; min-height: 100vh; padding-bottom: 0;">
+    <LessonNavbar />
+    <div style="background-color: #EFF6FF;">
+      <LessonSection />
+    </div>
+    <CategoryGrid client:load />
+    <RecommendedCarousel client:load slides={[0,1,2,3,4]} options={{ align: 'start', loop: false, slidesToScroll: 1 }} />
+    <ChoiceSection client:load />
+    <CoachingCTA client:load />
+    <Footer client:load />
+  </section>
+</Layout>

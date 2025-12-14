@@ -1,0 +1,15 @@
+---
+import DashboardLayout from "@/layouts/DashboardLayout.astro";
+import CrearCategoria from "@/view/crear-categoria/crearCategoria.astro";
+
+const { cookies, redirect } = Astro;
+const accessToken = cookies.get("accessToken");
+
+if (!accessToken) {
+  return redirect("/auth/login");
+}
+---
+
+<DashboardLayout title="Dashboard | Crear Categoría">
+  <CrearCategoria />
+</DashboardLayout>

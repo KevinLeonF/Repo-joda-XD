@@ -1,0 +1,17 @@
+---
+import DashboardLayout from '@/layouts/DashboardLayout.astro'
+import DashboardStats from '@/components/DashboardStats.astro'
+
+const { cookies, redirect } = Astro
+const accessToken = cookies.get('accessToken')
+
+if (!accessToken) {
+  return redirect('/auth/login')
+}
+---
+
+<DashboardLayout title='Dashboard | Teams'>
+  <div class='pt-5 lg:pl-72'>
+    <DashboardStats />
+  </div>
+</DashboardLayout>

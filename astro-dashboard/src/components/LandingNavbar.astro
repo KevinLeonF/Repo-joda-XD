@@ -1,0 +1,148 @@
+---
+import { navigation } from '@/config/navigation'
+import { LandingFlyout } from './LandingFlyout'
+import {
+  AppBar,
+  Toolbar,
+  Box,
+  Typography,
+  Button,
+  Link as MuiLink,
+  Container,
+} from '@mui/material'
+---
+
+<AppBar
+  position="absolute"
+  elevation={0}
+  sx={{
+    backgroundColor: '#4ECDC4',
+    boxShadow: 'none',
+    zIndex: 50,
+  }}
+>
+  <Container maxWidth="xl">
+    <Toolbar
+      disableGutters
+      sx={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: { xs: '12px 0', md: '24px 0' },
+      }}
+    >
+      {/* Logo */}
+      <Box
+        component="a"
+        href="#"
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          textDecoration: 'none',
+        }}
+      >
+        <Box
+          component="img"
+          src="/image/logo.svg"
+          alt="TOTC Logo"
+          sx={{
+            height: { xs: 32, md: 40 },
+            width: 'auto',
+          }}
+        />
+      </Box>
+
+      {/* Mobile Menu */}
+      <Box sx={{ display: { xs: 'block', lg: 'none' } }}>
+        <LandingFlyout client:load />
+      </Box>
+
+      {/* Desktop Navigation Links - Centered */}
+      <Box
+        sx={{
+          display: { xs: 'none', lg: 'flex' },
+          gap: 6,
+          position: 'absolute',
+          left: '50%',
+          transform: 'translateX(-50%)',
+        }}
+      >
+        {
+          navigation.map((item) => (
+            <MuiLink
+              href={item.href}
+              key={item.name}
+              sx={{
+                color: 'white',
+                fontSize: '14px',
+                fontWeight: 600,
+                textDecoration: 'none',
+                fontFamily: 'sans-serif',
+                '&:hover': {
+                  opacity: 0.8,
+                },
+                transition: 'opacity 0.2s',
+              }}
+            >
+              {item.name}
+            </MuiLink>
+          ))
+        }
+      </Box>
+
+      {/* Action Buttons */}
+      <Box
+        sx={{
+          display: { xs: 'none', lg: 'flex' },
+          gap: 2,
+        }}
+      >
+        <Button
+          component="a"
+          href="/auth/login"
+          sx={{
+            backgroundColor: 'white',
+            color: '#374151',
+            border: '1px solid #4ECDC4',
+            borderWidth: 1,
+            paddingX: 3,
+            paddingY: 1,
+            fontSize: '14px',
+            fontWeight: 600,
+            borderRadius: '8px',
+            fontFamily: 'sans-serif',
+            textTransform: 'none',
+            '&:hover': {
+              backgroundColor: 'white',
+              opacity: 0.9,
+            },
+          }}
+        >
+          Login
+        </Button>
+        <Button
+          component="a"
+          href="/auth/login?tab=register"
+          sx={{
+            backgroundColor: '#4ECDC4',
+            color: 'white',
+            paddingX: 3,
+            paddingY: 1,
+            fontSize: '14px',
+            fontWeight: 600,
+            borderRadius: '8px',
+            fontFamily: 'sans-serif',
+            textTransform: 'none',
+            boxShadow: 'none',
+            '&:hover': {
+              backgroundColor: '#45b8b0',
+              boxShadow: 'none',
+            },
+          }}
+        >
+          Sign Up
+        </Button>
+      </Box>
+    </Toolbar>
+  </Container>
+</AppBar>

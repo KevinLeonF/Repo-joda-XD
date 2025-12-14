@@ -1,0 +1,17 @@
+---
+import DashboardLayout from '@/layouts/DashboardLayout.astro'
+import TableCategorie from '@/components/table/TableCategorie'
+
+const { cookies, redirect } = Astro
+const accessToken = cookies.get('accessToken')
+
+if (!accessToken) {
+  return redirect('/auth/login')
+}
+---
+
+<DashboardLayout title='Dashboard | Listar Categoría'>
+  <div class='pt-5'>
+    <TableCategorie client:load />
+  </div>
+</DashboardLayout>

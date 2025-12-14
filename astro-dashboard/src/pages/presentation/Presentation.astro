@@ -1,0 +1,24 @@
+---
+import CarouselMenu from "@/components/carouselMenu/CarouselMenu";
+import { Footer } from "@/components/footer/Footer";
+import LandingNavbar from "@/components/LandingNavbar.astro";
+import Hero from "../../view/hero/Hero.astro";
+import SuccessSection from "../../view/success/SuccessSection.astro";
+import NewsSection from "../../view/news/NewsSection.astro";
+import { Box } from "@mui/material";
+import type { EmblaOptionsType } from "embla-carousel";
+const OPTIONS: EmblaOptionsType = { slidesToScroll: "auto" };
+const SLIDE_COUNT = 10;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+---
+
+<section style="background-color: white; min-height: 100vh;">
+  <LandingNavbar />
+  <Hero/>
+  <Box sx={{ backgroundColor: "white" }}>
+    <SuccessSection />
+    <CarouselMenu client:load slides={SLIDES} options={OPTIONS} />
+    <NewsSection />
+  </Box>
+  <Footer client:load />
+</section>

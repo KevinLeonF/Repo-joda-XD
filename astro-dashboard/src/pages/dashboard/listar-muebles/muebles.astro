@@ -1,0 +1,17 @@
+---
+import DashboardLayout from "@/layouts/DashboardLayout.astro";
+import CrearMueble from "@/view/crear-mueble/crearMueble.astro";
+import ListMuebles from "@/view/listar-muebles/list-muebles.astro";
+import Box from "@mui/material/Box";
+
+const { cookies, redirect } = Astro;
+const accessToken = cookies.get("accessToken");
+
+if (!accessToken) {
+  return redirect("/auth/login");
+}
+---
+
+<DashboardLayout title="Dashboard | Teams">
+  <ListMuebles />
+</DashboardLayout>

@@ -1,0 +1,20 @@
+---
+import DashboardLayout from "@/layouts/DashboardLayout.astro";
+import { controlPermisosFrontend } from "@/lib/control.permission";
+
+const { cookies, redirect } = Astro;
+const accessToken = cookies.get("accessToken");
+
+if (!accessToken) {
+  return redirect("/auth/login");
+}
+
+const checkAccess = controlPermisosFrontend("permiso-x");
+if(!checkAccess){
+  return redirect("/403/403");
+}
+---
+
+<DashboardLayout title="Dashboard | Teams">
+  <h1 class="pt-5 lg:pl-72">CREAR CATEGORIA</h1>
+</DashboardLayout>
